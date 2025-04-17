@@ -19,7 +19,7 @@ export function AuroraBackgroundDemo() {
                     className="max-w-4xl mx-auto"
                 >
                     <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                        <TextGenerateEffect words="Innovative Code, Exceptional Experiences" className="text-purple-400"/>
+                        <TextGenerateEffect words="Innovative Code & Exceptional Experiences" className="text-purple-400"/>
                     </h1>
 
                     <motion.p

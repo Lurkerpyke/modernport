@@ -4,14 +4,45 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Mail, MessageCircle, Phone, Rocket } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useState } from 'react';
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  console.log("Form submitted!");
-  // lógica de envio aqui
-};
 
 export default function ContactPage() {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
+            });
+
+            if (res.ok) {
+                setSuccess(true);
+                setName('');
+                setEmail('');
+                setMessage('');
+            } else {
+                console.error('Erro ao enviar a mensagem');
+            }
+        } catch (error) {
+            console.error('Erro na requisição:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-slate-900 pt-10">
             <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-slate-950/50">
@@ -27,45 +58,57 @@ export default function ContactPage() {
                         >
                             <Card className="p-6 sm:p-8 bg-slate-800 border border-slate-700 shadow-lg">
                                 <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                                    Send a Message
+                                    Me Envie Uma Mensagem
                                 </h2>
 
                                 <form className="space-y-6" onSubmit={handleSubmit}>
                                     <div>
-                                        <label className="block text-slate-300 mb-2 text-sm sm:text-base">Your Name</label>
+                                        <label className="block text-slate-300 mb-2">Seu Nome</label>
                                         <input
                                             type="text"
-                                            className="w-full p-3 sm:p-4 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm sm:text-base"
-                                            placeholder="John Doe"
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
+                                            className="w-full p-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white"
+                                            placeholder="Nome Completo"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-slate-300 mb-2 text-sm sm:text-base">Your Email</label>
+                                        <label className="block text-slate-300 mb-2">Seu Email</label>
                                         <input
                                             type="email"
-                                            className="w-full p-3 sm:p-4 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm sm:text-base"
-                                            placeholder="you@email.com"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            className="w-full p-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white"
+                                            placeholder="seuemail@exemplo.com"
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-slate-300 mb-2 text-sm sm:text-base">Message</label>
+                                        <label className="block text-slate-300 mb-2">Mensagem</label>
                                         <textarea
                                             rows={5}
-                                            className="w-full p-3 sm:p-4 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent text-sm sm:text-base"
-                                            placeholder="Write your message here..."
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                            className="w-full p-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white"
+                                            placeholder="Escreva sua mensagem aqui..."
                                         />
                                     </div>
 
                                     <Button
                                         size="lg"
-                                        className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all"
                                         type="submit"
+                                        disabled={loading}
+                                        className="w-full rounded-full bg-gradient-to-r from-purple-600 to-pink-600"
                                     >
                                         <Rocket className="mr-2 h-5 w-5" />
-                                        Launch Message
+                                        {loading ? 'Enviando...' : 'Enviar Mensagem'}
                                     </Button>
+
+                                    {success && (
+                                        <p className="text-green-400 text-sm mt-4">Mensagem Enviada Com Sucesso! 🚀</p>
+
+                                    )}
                                 </form>
                             </Card>
                         </motion.div>
@@ -78,25 +121,31 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                             className="w-full space-y-8"
                         >
-                            <div className="space-y-6">
+                            <div className="space-y-6 flex flex-col p-0">
                                 <h3 className="text-xl sm:text-2xl font-bold text-slate-200 mb-6">
                                     <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                        Direct Channels
+                                        Interação direta
                                     </span>
                                 </h3>
 
-                                <div className="grid gap-6">
-                                    <Card className="p-6 bg-slate-800 border border-slate-700 hover:border-purple-400 transition-colors">
+                                <div className="grid gap-6 w-full max-w-full">
+                                    <Card className="p-6 bg-slate-800 border border-slate-700 hover:border-purple-400 transition-colors min-w-0">
                                         <div className="flex items-center gap-4">
                                             <div className="p-3 bg-purple-500/10 rounded-lg">
                                                 <Mail className="h-6 w-6 text-purple-400" />
                                             </div>
-                                            <div>
+                                            <div className="min-w-0">
                                                 <h4 className="text-base font-semibold text-slate-200">Email</h4>
-                                                <p className="text-sm text-slate-400 break-all">contact@devportfolio.com</p>
+                                                <a
+                                                    href="mailto:leandro.soares.eneterio@gmail.com"
+                                                    className="text-sm text-slate-400 break-words block overflow-hidden text-ellipsis"
+                                                >
+                                                    leandro.soares.eneterio@gmail.com
+                                                </a>
                                             </div>
                                         </div>
                                     </Card>
+
 
                                     <Card className="p-6 bg-slate-800 border border-slate-700 hover:border-purple-400 transition-colors">
                                         <div className="flex items-center gap-4">
@@ -104,8 +153,8 @@ export default function ContactPage() {
                                                 <Phone className="h-6 w-6 text-purple-400" />
                                             </div>
                                             <div>
-                                                <h4 className="text-base font-semibold text-slate-200">Phone</h4>
-                                                <p className="text-sm text-slate-400">+1 (555) 123-4567</p>
+                                                <h4 className="text-base font-semibold text-slate-200">Telefone</h4>
+                                                <a className="text-sm text-slate-400" href="tel:+5581997147184">+55 (81) 997147184</a>
                                             </div>
                                         </div>
                                     </Card>
@@ -116,7 +165,7 @@ export default function ContactPage() {
                                                 <MessageCircle className="h-6 w-6 text-purple-400" />
                                             </div>
                                             <div>
-                                                <h4 className="text-base font-semibold text-slate-200">Social</h4>
+                                                <h4 className="text-base font-semibold text-slate-200">Redes Sociais</h4>
                                                 <div className="flex flex-wrap gap-2 mt-2">
                                                     {['LinkedIn', 'GitHub', 'Twitter'].map((platform) => (
                                                         <span
