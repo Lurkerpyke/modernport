@@ -16,7 +16,7 @@ export const SkillsSection = () => {
                     className="text-4xl font-bold text-center mb-16 text-slate-200"
                 >
                     <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Technical Mastery
+                        Habilidades Técnicas
                     </span>
                 </motion.h2>
 
@@ -74,34 +74,34 @@ export const SkillsSection = () => {
     );
 };
 
-// Updated Data
+// Dados Atualizados
 const SKILLS = [
     {
-        title: 'Frontend Engineering',
+        title: 'Engenharia Frontend',
         icon: <Code />,
-        tooltip: 'React Ecosystem Expert | Next.js Certified',
-        description: 'Building performant and accessible user interfaces',
+        tooltip: 'Especialista no Ecossistema React | Certificado em Next.js',
+        description: 'Desenvolvimento de interfaces de usuário performáticas e acessíveis',
         tech: ['NextJS', 'TypeScript', 'React', 'JavaScript']
     },
     {
-        title: 'UI/UX Design',
+        title: 'Design UI/UX',
         icon: <Palette />,
-        tooltip: 'Design System Architect | Framer Motion Specialist',
-        description: 'Creating intuitive and visually stunning experiences',
+        tooltip: 'Arquiteto de Sistemas de Design | Especialista em Framer Motion',
+        description: 'Criação de experiências intuitivas e visualmente impressionantes',
         tech: ['Figma', 'Aceternity', 'Framer Motion', 'Tailwind CSS'],
     },
     {
-        title: 'Backend Development',
+        title: 'Desenvolvimento Backend',
         icon: <Server />,
-        tooltip: 'Cloud-Native Solutions | REST/GraphQL APIs',
-        description: 'Scalable backend services and API development',
+        tooltip: 'Soluções Nativas na Nuvem | APIs REST/GraphQL',
+        description: 'Desenvolvimento de serviços escaláveis e APIs',
         tech: ['Node.js', 'GraphQL', 'PostgreSQL', 'Redis'],
     },
     {
-        title: 'DevOps & Cloud',
+        title: 'DevOps & Nuvem',
         icon: <Database />,
-        tooltip: 'AWS Certified | Kubernetes Specialist',
-        description: 'CI/CD pipelines and cloud infrastructure management',
+        tooltip: 'Certificado AWS | Especialista em Kubernetes',
+        description: 'Gestão de pipelines CI/CD e infraestrutura em nuvem',
         tech: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
     },
 ]

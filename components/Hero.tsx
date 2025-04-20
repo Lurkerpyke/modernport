@@ -19,7 +19,7 @@ export function AuroraBackgroundDemo() {
                     className="max-w-4xl mx-auto"
                 >
                     <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                        <TextGenerateEffect words="Innovative Code & Exceptional Experiences" className="text-purple-400"/>
+                        <TextGenerateEffect words="Tecnologia Criativa & Resultados Memoráveis" className="text-purple-400" />
                     </h1>
 
                     <motion.p
@@ -28,8 +28,7 @@ export function AuroraBackgroundDemo() {
                         transition={{ delay: 0.6 }}
                         className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
                     >
-                        Full-Stack Engineer crafting performant applications with modern
-                        tech stack and cutting-edge design principles
+                        Especialista em desenvolvimento web e análise de dados, criando soluções digitais completas — de sites e sistemas a insights estratégicos.
                     </motion.p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,7 +38,7 @@ export function AuroraBackgroundDemo() {
                             asChild
                         >
                             <Link href="/#projects">
-                                <span className="mr-2">View Projects</span>
+                                <span className="mr-2">Veja Projetos</span>
                                 <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
@@ -50,7 +49,7 @@ export function AuroraBackgroundDemo() {
                             asChild
                         >
                             <Link href="/contact">
-                                <span className="mr-2">Hire Me</span>
+                                <span className="mr-2">Me Contrate</span>
                                 <Rocket className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>

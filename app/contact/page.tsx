@@ -164,16 +164,48 @@ export default function ContactPage() {
                                             <div className="p-3 bg-purple-500/10 rounded-lg">
                                                 <MessageCircle className="h-6 w-6 text-purple-400" />
                                             </div>
-                                            <div>
+                                            <div className="flex-1">
                                                 <h4 className="text-base font-semibold text-slate-200">Redes Sociais</h4>
                                                 <div className="flex flex-wrap gap-2 mt-2">
-                                                    {['LinkedIn', 'GitHub', 'Twitter'].map((platform) => (
-                                                        <span
-                                                            key={platform}
-                                                            className="px-3 py-1 text-sm rounded-full bg-purple-900/30 text-purple-300 hover:bg-purple-900/50 transition-colors"
+                                                    {[
+                                                        {
+                                                            name: 'LinkedIn',
+                                                            url: 'https://www.linkedin.com/in/seu-perfil',
+                                                            aria: 'Visitar perfil no LinkedIn'
+                                                        },
+                                                        {
+                                                            name: 'GitHub',
+                                                            url: 'https://github.com/seu-usuario',
+                                                            aria: 'Visitar perfil no GitHub'
+                                                        },
+                                                        {
+                                                            name: 'Twitter',
+                                                            url: 'https://twitter.com/seu-handle',
+                                                            aria: 'Visitar perfil no Twitter'
+                                                        }
+                                                    ].map((social) => (
+                                                        <a
+                                                            key={social.name}
+                                                            href={social.url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            aria-label={social.aria}
+                                                            className="px-3 py-1 text-sm rounded-full bg-purple-900/30 text-purple-300 hover:bg-purple-900/50 transition-colors cursor-pointer inline-flex items-center gap-1.5"
                                                         >
-                                                            {platform}
-                                                        </span>
+                                                            {social.name}
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20"
+                                                                fill="currentColor"
+                                                                className="w-3.5 h-3.5 opacity-70"
+                                                            >
+                                                                <path
+                                                                    fillRule="evenodd"
+                                                                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                                                    clipRule="evenodd"
+                                                                />
+                                                            </svg>
+                                                        </a>
                                                     ))}
                                                 </div>
                                             </div>

@@ -17,21 +17,21 @@ export const Navbar = () => {
                     <Link href="/" className="flex items-center gap-2">
                         <Code className="h-6 w-6 text-purple-400" />
                         <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                            DevPortfolio
+                            Leandro.S Dev
                         </span>
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">
                         <Button variant="ghost" asChild>
-                            <Link href="/about" className="text-slate-300 hover:text-purple-400 flex items-center gap-2">
+                            <Link href="#about" className="text-slate-300 hover:text-purple-400 flex items-center gap-2">
                                 <User className="h-4 w-4" />
-                                About
+                                Sobre mim
                             </Link>
                         </Button>
                         <Button variant="ghost" asChild>
                             <Link href="/contact" className="text-slate-300 hover:text-pink-400 flex items-center gap-2">
                                 <Mail className="h-4 w-4" />
-                                Contact
+                                Contatos
                             </Link>
                         </Button>
                     </div>

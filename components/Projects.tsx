@@ -5,7 +5,7 @@ export function Projects() {
     return (
         <section className="relative" id='projects'>
             <div className='flex flex-col items-center justify-center h-screen'>
-              <h2 className='text-4xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-10'>Projects</h2>
+              <h2 className='text-4xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-10'>Projetos</h2>
               <StickyScroll content={PROJECTS_CONTENT} />
             </div>
         </section>

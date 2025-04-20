@@ -39,11 +39,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
                 <h2 className="text-lg md:text-4xl mb-4 text-center text-slate-200 max-w-4xl">
                     <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Career Journey
+                        Conheça sobre minha jornada
                     </span>
                 </h2>
                 <p className="text-slate-400 text-sm md:text-base max-w-sm mx-auto text-center">
-                    My professional evolution through key milestones and achievements
+                    Olá me chamo Leandro Soares, sou um entusiasta da tecnologia e uma amante dos desafios. Posso te ajudar criar sua presença online e se destacar no mar das redes e dar aquele UP no seu negócio.
                 </p>
             </div>
 
