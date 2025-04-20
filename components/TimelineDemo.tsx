@@ -131,6 +131,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/webgallery.png'
+                            alt="cards template"
                             width={500}
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
@@ -189,7 +190,7 @@ export function TimelineDemo() {
             content: (
                 <div>
                     <p className="mb-8 text-xs font-normal md:text-sm bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Em 2025 Percebo uma demanda adormecida nas cidades de Camocim de São félix e região, pretendo ser pioneiro e ajudar as empresas locais e governamentais a se digitalizarem. Evitando a "Fulga de cérebro" que acontece com frequência na cidade. Criando profissionais de TI e de análise de dados.
+                        Em 2025 Percebo uma demanda adormecida nas cidades de Camocim de São félix e região, pretendo ser pioneiro e ajudar as empresas locais e governamentais a se digitalizarem. Evitando a &quot;Fulga de cérebro&quot; que acontece com frequência na cidade. Criando profissionais de TI e de análise de dados.
                     </p>
                     <p className="mb-8 text-xs font-normal md:text-sm bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Minha visão de futuro é criar uma empresa de desenvolvimento de software e de análise de dados. E fazer Camocim ser um polo tecnológico na região e ter uma imagem de exelência bem como um polo de inovação. Garantindo segurança cibernética e otimizando processos sociais com a ajuda de ferramentas tecnológicas.
@@ -231,6 +232,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/gym2.png'
+                            alt="cards template"
                             width={500}
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"

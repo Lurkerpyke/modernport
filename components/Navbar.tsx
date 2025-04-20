@@ -50,7 +50,7 @@ export const Navbar = () => {
                         </Button>
                         <Button variant="ghost" asChild>
                             <Link
-                                href="/curriculo.pdf"
+                                href="/Curriculo_2025.pdf"
                                 download
                                 className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
                             >

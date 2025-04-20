@@ -36,8 +36,8 @@ export default function ContactPage() {
             } else {
                 console.error('Erro ao enviar a mensagem');
             }
-        } catch (error) {
-            console.error('Erro na requisição:', error);
+        } catch {
+            console.error('Erro na requisição:');
         } finally {
             setLoading(false);
         }
