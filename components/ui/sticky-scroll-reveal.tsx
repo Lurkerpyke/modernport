@@ -66,31 +66,23 @@ export const StickyScroll = ({
             animate={{
                 backgroundColor: backgroundColors[activeCard % backgroundColors.length],
             }}
-            className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-10"
+            className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto overflow-x-hidden rounded-md p-4 lg:p-10 w-full"
             ref={ref}
         >
             <div className="div relative flex items-start px-4">
-                <div className="max-w-2xl">
+                <div className="max-w-full lg:max-w-2xl"> {/* Updated max-width */}
                     {content.map((item, index) => (
                         <div key={item.title + index} className="my-20">
                             <motion.h2
-                                initial={{
-                                    opacity: 0,
-                                }}
-                                animate={{
-                                    opacity: activeCard === index ? 1 : 0.3,
-                                }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                                 className="text-2xl font-bold text-slate-100"
                             >
                                 {item.title}
                             </motion.h2>
                             <motion.p
-                                initial={{
-                                    opacity: 0,
-                                }}
-                                animate={{
-                                    opacity: activeCard === index ? 1 : 0.3,
-                                }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
                                 className="text-kg mt-10 max-w-sm text-slate-300"
                             >
                                 {item.description}
