@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Mail, MessageCircle, Phone, Rocket } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useState } from 'react';
+import Image from 'next/image';
 
 
 export default function ContactPage() {
@@ -14,10 +15,17 @@ export default function ContactPage() {
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState('');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
+        if (!name || !email || !message) {
+            alert('Preencha todos os campos!');
+            setLoading(false);
+            return;
+        }
+
 
         try {
             const res = await fetch('/api/contact', {
@@ -109,6 +117,9 @@ export default function ContactPage() {
                                         <p className="text-green-400 text-sm mt-4">Mensagem Enviada Com Sucesso! 🚀</p>
 
                                     )}
+                                    {error && (
+                                        <p className="text-red-400 text-sm mt-4">{error}</p>
+                                    )}
                                 </form>
                             </Card>
                         </motion.div>
@@ -170,17 +181,17 @@ export default function ContactPage() {
                                                     {[
                                                         {
                                                             name: 'LinkedIn',
-                                                            url: 'https://www.linkedin.com/in/seu-perfil',
+                                                            url: 'https://www.linkedin.com/in/leandro-soares-eneterio-35985b306/',
                                                             aria: 'Visitar perfil no LinkedIn'
                                                         },
                                                         {
                                                             name: 'GitHub',
-                                                            url: 'https://github.com/seu-usuario',
+                                                            url: 'https://github.com/Lurkerpyke',
                                                             aria: 'Visitar perfil no GitHub'
                                                         },
                                                         {
-                                                            name: 'Twitter',
-                                                            url: 'https://twitter.com/seu-handle',
+                                                            name: 'Instagram',
+                                                            url: 'https://www.instagram.com/leandrosoares321/',
                                                             aria: 'Visitar perfil no Twitter'
                                                         }
                                                     ].map((social) => (
@@ -221,10 +232,12 @@ export default function ContactPage() {
                                 viewport={{ once: true }}
                                 className="hidden md:block"
                             >
-                                <img
+                                <Image
                                     src="/undraw/undraw_contact-us_kcoa.svg"
-                                    alt="Contact illustration"
-                                    className="w-full max-w-md mx-auto"
+                                    alt="Ilustração de contato"
+                                    width={400}
+                                    height={300}
+                                    priority
                                 />
                             </motion.div>
                         </motion.div>
