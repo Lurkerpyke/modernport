@@ -93,15 +93,17 @@ export const Navbar = () => {
                             <Mail className="h-4 w-4" />
                             Contatos
                         </Link>
-                        <Link
-                            href="/Curriculo_2025.pdf"
-                            download
-                            onClick={closeMenu}
-                            className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
-                        >
-                            <FileText className="h-4 w-4" />
-                            Baixe Currículo
-                        </Link>
+                        <Button variant="ghost" asChild>
+                            <Link
+                                href="/Curriculo_2025.pdf"
+                                download
+                                onClick={closeMenu}
+                                className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
+                            >
+                                <FileText className="h-4 w-4" />
+                                Baixe Currículo
+                            </Link>
+                        </Button>
                     </div>
                 )}
             </div>
