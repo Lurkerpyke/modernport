@@ -8,12 +8,14 @@ const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
   display: "swap", // melhora o carregamento perceptível
+  preload: true, // Add preloading
 });
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
   display: "swap",
+  preload: true, // Add preloading
 });
 
 export const metadata: Metadata = {
@@ -29,6 +31,8 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  keywords: ["Developer", "Portfolio", "React", "Next.js"],
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -38,7 +42,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <head />
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`
           ${geistSans.variable} 
