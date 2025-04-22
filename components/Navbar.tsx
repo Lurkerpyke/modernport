@@ -63,6 +63,8 @@ export const Navbar = () => {
                     {/* Menu Mobile - Toggle */}
                     <div className="md:hidden">
                         <Button
+                            name='menu-toggle'
+                            aria-label="Toggle menu"
                             variant="ghost"
                             className="text-slate-300"
                             onClick={toggleMenu}
