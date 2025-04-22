@@ -32,15 +32,6 @@ export const Navbar = () => {
                     <div className="hidden md:flex items-center gap-6">
                         <Button variant="ghost" asChild>
                             <Link
-                                href="#about"
-                                className="text-slate-300 hover:text-purple-400 flex items-center gap-2"
-                            >
-                                <User className="h-4 w-4" />
-                                Sobre mim
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" asChild>
-                            <Link
                                 href="/contact"
                                 className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
                             >
@@ -77,14 +68,6 @@ export const Navbar = () => {
                 {/* Menu Mobile - Items */}
                 {isOpen && (
                     <div className="md:hidden mt-2 flex flex-col gap-2 pb-4">
-                        <Link
-                            href="#about"
-                            onClick={closeMenu}
-                            className="text-slate-300 hover:text-purple-400 flex items-center gap-2"
-                        >
-                            <User className="h-4 w-4" />
-                            Sobre mim
-                        </Link>
                         <Link
                             href="/contact"
                             onClick={closeMenu}
