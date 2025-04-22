@@ -15,7 +15,6 @@ export default function ContactPage() {
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
-    const [error, setError] = useState('');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -116,9 +115,6 @@ export default function ContactPage() {
                                     {success && (
                                         <p className="text-green-400 text-sm mt-4">Mensagem Enviada Com Sucesso! 🚀</p>
 
-                                    )}
-                                    {error && (
-                                        <p className="text-red-400 text-sm mt-4">{error}</p>
                                     )}
                                 </form>
                             </Card>
