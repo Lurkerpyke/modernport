@@ -43,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     </span>
                 </h2>
                 <p className="text-slate-400 text-sm md:text-base max-w-sm mx-auto text-center">
-                    Olá me chamo Leandro Soares, sou um entusiasta da tecnologia e uma amante dos desafios. Posso te ajudar criar sua presença online e se destacar no mar das redes e dar aquele UP no seu negócio.
+                    Olá me chamo Leandro Soares, sou um entusiasta da tecnologia e um amante dos desafios. Posso te ajudar criar sua presença online e se destacar no mar das redes e dar aquele UP no seu negócio.
                 </p>
             </div>
 
