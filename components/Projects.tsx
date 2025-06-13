@@ -16,6 +16,8 @@ const PROJECTS_CONTENT = [
     {
         title: "Sistema de Gerenciamento para Academias",
         description: "Plataforma completa para academias, com autenticação segura, cadastro de membros, agendamento de aulas, controle de presença e painel administrativo moderno. Desenvolvido com Next.js, Tailwind e Supabase, o sistema é ideal para academias que desejam profissionalizar sua gestão e oferecer uma experiência digital integrada para alunos e profissionais.",
+        liveUrl: "https://gym-management-ebon.vercel.app/",
+        githubUrl: "https://github.com/Lurkerpyke/gym-management",
         tech: ['Next.js', 'Supabase', 'Tailwind CSS', 'Prisma'],
         content: (
             <div className="h-full w-full relative">
@@ -34,6 +36,8 @@ const PROJECTS_CONTENT = [
     {
         title: "Portfólio Pessoal com Next.js e UI Moderna",
         description: "Portfólio profissional desenvolvido com Next.js, TypeScript, Tailwind e componentes do Aceternity UI. Com design responsivo, efeitos animados e foco em performance, o site apresenta meus projetos, stack de tecnologias e formas de contato de maneira elegante e objetiva. Ideal para destacar habilidades técnicas e criar uma presença online moderna.",
+        liveUrl: "https://leandroportfolio.vercel.app/",
+        githubUrl: "https://github.com/Lurkerpyke/my-port",
         tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Aceternity UI'],
         content: (
             <div className="h-full w-full relative ">

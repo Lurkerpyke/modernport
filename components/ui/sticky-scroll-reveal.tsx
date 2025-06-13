@@ -3,6 +3,8 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 export const StickyScroll = ({
     content,
@@ -12,14 +14,14 @@ export const StickyScroll = ({
         title: string;
         description: string;
         content?: React.ReactNode;
+        liveUrl?: string;
+        githubUrl?: string;
     }[];
     contentClassName?: string;
 }) => {
     const [activeCard, setActiveCard] = React.useState(0);
     const ref = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
-        // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-        // target: ref
         container: ref,
         offset: ["start start", "end start"],
     });
@@ -41,15 +43,15 @@ export const StickyScroll = ({
     });
 
     const backgroundColors = [
-        "#0f172a", // slate-900
-        "#000000", // black
-        "#171717", // neutral-900
+        "#0f172a",
+        "#000000",
+        "#171717",
     ];
 
     const linearGradients = useMemo(() => [
-        "linear-gradient(to bottom right, #ffffff, #008a94)", // cyan-500 to emerald-500
-        "linear-gradient(to bottom right, #111330, #6366f1)", // pink-500 to indigo-500
-        "linear-gradient(to bottom right, #f97316, #eab308)", // orange-500 to yellow-500
+        "linear-gradient(to bottom right, #ffffff, #008a94)",
+        "linear-gradient(to bottom right, #111330, #6366f1)",
+        "linear-gradient(to bottom right, #f97316, #eab308)",
     ], []);
 
     const [backgroundGradient, setBackgroundGradient] = useState(
@@ -60,7 +62,6 @@ export const StickyScroll = ({
         setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
     }, [activeCard, linearGradients]);
 
-
     return (
         <motion.div
             animate={{
@@ -70,9 +71,9 @@ export const StickyScroll = ({
             ref={ref}
         >
             <div className="div relative flex items-start px-4">
-                <div className="max-w-full lg:max-w-2xl"> {/* Updated max-width */}
+                <div className="max-w-full lg:max-w-2xl">
                     {content.map((item, index) => (
-                        <div key={item.title + index} className="my-20">
+                        <div key={item.title + index} className="my-20 py-5">
                             <motion.h2
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
@@ -83,10 +84,45 @@ export const StickyScroll = ({
                             <motion.p
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                                className="text-kg mt-10 max-w-sm text-slate-300"
+                                className="text-lg mt-10 max-w-sm text-slate-300"
                             >
                                 {item.description}
                             </motion.p>
+
+                            {/* Project buttons */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{
+                                    opacity: activeCard === index ? 1 : 0.3,
+                                    y: activeCard === index ? 0 : 10
+                                }}
+                                className="mt-6 flex gap-3"
+                            >
+                                {item.liveUrl && (
+                                    <Button asChild variant="secondary" className="mr-2">
+                                        <a
+                                            href={item.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1"
+                                        >
+                                            Veja ao vivo <ExternalLink className="h-4 w-4" />
+                                        </a>
+                                    </Button>
+                                )}
+                                {item.githubUrl && (
+                                    <Button asChild variant="outline">
+                                        <a
+                                            href={item.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1"
+                                        >
+                                            Código no GitHub <ExternalLink className="h-4 w-4" />
+                                        </a>
+                                    </Button>
+                                )}
+                            </motion.div>
                         </div>
                     ))}
                     <div className="h-40" />

@@ -150,3 +150,21 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes terminal-caret {
+
+  0%,
+  100% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+.terminal::after {
+  content: "▋";
+  animation: terminal-caret 1.2s infinite;
+  color: #4ade80;
+}
