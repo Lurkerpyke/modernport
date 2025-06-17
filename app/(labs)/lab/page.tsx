@@ -40,9 +40,6 @@ import { Terminal } from '@/components/ui/terminal';
 import { CodeBlock } from '@/components/ui/code-block';
 import { experiments } from '@/data/Experiments';
 
-
-
-
 const LabPage = () => {
     const [activeExperiment, setActiveExperiment] = useState<string | null>(null);
     const [codeProgress, setCodeProgress] = useState(0);

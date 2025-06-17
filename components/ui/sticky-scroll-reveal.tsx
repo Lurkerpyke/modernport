@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "motion/react";
-import { motion } from "motion/react";
+// Fixed Framer Motion imports
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
-export const StickyScroll = ({
+const StickyScroll = ({
     content,
     contentClassName,
 }: {
@@ -67,10 +67,10 @@ export const StickyScroll = ({
             animate={{
                 backgroundColor: backgroundColors[activeCard % backgroundColors.length],
             }}
-            className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto overflow-x-hidden rounded-md p-4 lg:p-10 w-full"
+            className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-md p-4 lg:p-10 w-full"
             ref={ref}
         >
-            <div className="div relative flex items-start px-4">
+            <div className="relative flex items-start px-4">
                 <div className="max-w-full lg:max-w-2xl">
                     {content.map((item, index) => (
                         <div key={item.title + index} className="my-20 py-5">
@@ -140,3 +140,5 @@ export const StickyScroll = ({
         </motion.div>
     );
 };
+
+export default StickyScroll;

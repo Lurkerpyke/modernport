@@ -1,5 +1,12 @@
 import React from 'react'
-import { StickyScroll } from './ui/sticky-scroll-reveal'
+// import { StickyScroll } from './ui/sticky-scroll-reveal';
+import dynamic from 'next/dynamic';
+
+const StickyScroll = dynamic(
+    () => import('./ui/sticky-scroll-reveal'),
+    { ssr: false }
+  );
+  
 
 export function Projects() {
     return (
@@ -53,5 +60,26 @@ const PROJECTS_CONTENT = [
             </div>
         ),
     },
+    {
+        title: "Biblioteca Virtual Escolar",
+        description: "Biblioteca virtual completa voltada para ambientes escolares. Possui painel administrativo para controle de usuários, gerenciamento de livros e histórico de empréstimos. Com autenticação segura e um catálogo intuitivo, o sistema facilita o acesso a livros e o acompanhamento de registros de empréstimos. Ideal para instituições de ensino que desejam modernizar o processo de gestão bibliotecária.",
+        liveUrl: "https://bibliotec-ten.vercel.app/",
+        githubUrl: "https://github.com/Lurkerpyke/bibliotec",
+        tech: ['Next.js', 'Supabase', 'Tailwind CSS', 'TypeScript'],
+        content: (
+            <div className="h-full w-full relative">
+                <img
+                    src="/bibliotec.png"
+                    alt="Biblioteca virtual escolar"
+                    className="h-full w-full object-cover mix-blend-overlay opacity-90"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900 to-transparent">
+                    <h3 className="text-2xl font-bold text-white">Sistema de Biblioteca Escolar</h3>
+                    <p className="text-slate-300 mt-2">Gerenciamento de livros, usuários e empréstimos com painel administrativo</p>
+                </div>
+            </div>
+        ),
+    },
+    
     // Add more projects...
 ]
