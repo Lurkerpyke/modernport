@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title: "Leandro Dev",
     description: "Explore projetos modernos e experiências de Leandro Soares",
     url: "https://leandrodevportfolio.vercel.app/",
+    images: ['https://leandrodevportfolio.vercel.app/og.png'],
     siteName: "Leandro Dev",
     locale: "pt_BR",
     type: "website",
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta property="og:image" content="Link preview image URL"></meta>
       </head>
       <body
         className={`
