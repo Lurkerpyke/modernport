@@ -29,7 +29,8 @@ const PROJECTS_CONTENT = [
         content: (
             <div className="h-full w-full relative">
                 <img
-                    src="/gym.png"
+                    src="/gym.webp"
+                    loading='lazy'
                     alt="Sistema de gerenciamento de academia"
                     className="h-full w-full object-cover mix-blend-overlay opacity-90"
                 />
@@ -49,7 +50,8 @@ const PROJECTS_CONTENT = [
         content: (
             <div className="h-full w-full relative ">
                 <img
-                    src="/portfolio.png"
+                    src="/Portfolio.webp"
+                    loading='lazy'
                     alt="Portfólio pessoal"
                     className="h-full w-full object-cover mix-blend-overlay opacity-90"
                 />
@@ -69,7 +71,8 @@ const PROJECTS_CONTENT = [
         content: (
             <div className="h-full w-full relative">
                 <img
-                    src="/bibliotec.png"
+                    src="/bibliotec.webp"
+                    loading='lazy'
                     alt="Biblioteca virtual escolar"
                     className="h-full w-full object-cover mix-blend-overlay opacity-90"
                 />
