@@ -50,7 +50,7 @@ const PROJECTS_CONTENT = [
         content: (
             <div className="h-full w-full relative ">
                 <img
-                    src="/Portfolio.webp"
+                    src="/portfolio.webp"
                     loading='lazy'
                     alt="Portfólio pessoal"
                     className="h-full w-full object-cover mix-blend-overlay opacity-90"
