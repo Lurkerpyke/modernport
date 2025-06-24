@@ -25,7 +25,7 @@ export function AuroraBackgroundDemo() {
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
+                        transition={{ delay: 0.4 }}
                         className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
                     >
                         Especialista em desenvolvimento web e análise de dados, criando soluções digitais completas — de sites e sistemas a insights estratégicos.
