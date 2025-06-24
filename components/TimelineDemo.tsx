@@ -17,6 +17,7 @@ export function TimelineDemo() {
                     <div className="grid grid-cols-2 gap-4">
                         <img
                             src='/timeline/salaufpe.jpg'
+                            loading="lazy"
                             alt="startup template"
                             width={500}
                             height={500}
@@ -24,6 +25,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/paredeufpe.jpg'
+                            loading="lazy"
                             alt="startup template"
                             width={500}
                             height={500}
@@ -31,6 +33,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/campusufpe.jpg'
+                            loading="lazy"
                             alt="startup template"
                             width={500}
                             height={500}
@@ -53,6 +56,7 @@ export function TimelineDemo() {
                     <div className="grid grid-cols-2 gap-4">
                         <img
                             src='/timeline/analisedados2.png'
+                            loading="lazy"
                             alt="hero template"
                             width={500}
                             height={500}
@@ -60,6 +64,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/analisedados3.png'
+                            loading="lazy"
                             alt="feature template"
                             width={500}
                             height={500}
@@ -67,6 +72,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/analisedados4.png'
+                            loading="lazy"
                             alt="bento template"
                             width={500}
                             height={500}
@@ -74,6 +80,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/portfolio1.png'
+                            loading="lazy"
                             alt="cards template"
                             width={500}
                             height={500}
@@ -116,6 +123,7 @@ export function TimelineDemo() {
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         <img
+                            loading="lazy"
                             src='/timeline/analisedadosimportante.png'
                             alt="hero template"
                             width={500}
@@ -124,6 +132,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/sqlserver2.png'
+                            loading="lazy"
                             alt="feature template"
                             width={500}
                             height={500}
@@ -131,6 +140,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/webgallery.png'
+                            loading="lazy"
                             alt="cards template"
                             width={500}
                             height={500}
@@ -138,6 +148,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/analiseimg2.png'
+                            loading="lazy"
                             alt="cards template"
                             width={500}
                             height={500}
@@ -160,6 +171,7 @@ export function TimelineDemo() {
                     <div className="grid grid-cols-2 gap-4">
                         <img
                             src='/timeline/devnext1.png'
+                            loading="lazy"
                             alt="hero template"
                             width={500}
                             height={500}
@@ -167,6 +179,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/portfolio2.png'
+                            loading="lazy"
                             alt="feature template"
                             width={500}
                             height={500}
@@ -174,6 +187,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/cs50.png'
+                            loading="lazy"
                             alt="feature template"
                             width={500}
                             height={500}
@@ -218,6 +232,7 @@ export function TimelineDemo() {
                     <div className="grid grid-cols-2 gap-4">
                         <img
                             src='/timeline/gym4.png'
+                            loading="lazy"
                             alt="hero template"
                             width={500}
                             height={500}
@@ -225,6 +240,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/gym3.png'
+                            loading="lazy"
                             alt="feature template"
                             width={500}
                             height={500}
@@ -232,6 +248,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/gym2.png'
+                            loading="lazy"
                             alt="cards template"
                             width={500}
                             height={500}
@@ -239,6 +256,7 @@ export function TimelineDemo() {
                         />
                         <img
                             src='/timeline/gym1.png'
+                            loading="lazy"
                             alt="cards template"
                             width={500}
                             height={500}
