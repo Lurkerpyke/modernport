@@ -131,11 +131,18 @@ const StickyScroll = ({
             <div
                 style={{ background: backgroundGradient }}
                 className={cn(
-                    "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
+                    "sticky top-25 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
                     contentClassName,
                 )}
             >
-                {content[activeCard].content ?? null}
+                <div className="relative h-full w-full">
+                    <img
+                        src="/undraw/undraw_professional-card_ldgq.svg"
+                        alt="girl"
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[150px] z-10 object-contain"
+                    />
+                    {content[activeCard].content ?? null}
+                </div>
             </div>
         </motion.div>
     );

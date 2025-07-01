@@ -8,7 +8,7 @@ const StickyScroll = dynamic(
 );
 
 
-export function Projects() {
+export function     Projects() {
     return (
         <section className="relative" id='projects'>
             <div className='flex flex-col items-center justify-center h-screen'>

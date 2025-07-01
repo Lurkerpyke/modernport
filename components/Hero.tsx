@@ -22,11 +22,11 @@ export function AuroraBackgroundDemo() {
                         <TextGenerateEffect words="Tecnologia Criativa & Resultados Memoráveis" className="text-purple-400" />
                     </h1>
 
-                    <p
+                    <motion.p
                         className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
                     >
                         Especialista em desenvolvimento web e análise de dados, criando soluções digitais completas — de sites e sistemas a insights estratégicos.
-                    </p>
+                    </motion.p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button
