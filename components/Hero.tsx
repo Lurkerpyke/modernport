@@ -53,6 +53,18 @@ export function AuroraBackgroundDemo() {
                     </div>
                 </motion.div>
             </div>
+
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-0 left-0" />
+            <img src="/undraw/flower.svg" alt="flower"  className="h-[300px] w-[100px] absolute top-40 left-0"/>
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-80 left-0" />
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-120 left-0" />
+
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-0 right-0" />
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-40 right-0" />
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-80 right-0" />
+            <img src="/undraw/flower.svg" alt="flower" className="h-[300px] w-[100px] absolute top-120 right-0" />
+
+
             {/* Animated SVGs */}
             <motion.img
                 src="/undraw/undraw_a-day-at-the-park_9w8d.svg"
