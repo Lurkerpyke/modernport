@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-// Fixed Framer Motion imports
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -128,20 +127,33 @@ const StickyScroll = ({
                     <div className="h-40" />
                 </div>
             </div>
-            <div
-                style={{ background: backgroundGradient }}
-                className={cn(
-                    "sticky top-25 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
-                    contentClassName,
-                )}
-            >
-                <div className="relative h-full w-full">
+
+            {/* Container for the floating card and SVG */}
+            <div className="sticky top-0 hidden lg:block">
+                {/* Girl positioned above the card */}
+                <div className="relative mb-[-70px] z-20">
                     <img
                         src="/undraw/undraw_professional-card_ldgq.svg"
                         alt="girl"
-                        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[150px] z-10 object-contain"
+                        className="h-[150px] mx-auto"
+                        style={{
+                            transform: 'translateY(20%)',
+                            maxWidth: '90%'
+                        }}
                     />
-                    {content[activeCard].content ?? null}
+                </div>
+
+                {/* Card container */}
+                <div
+                    style={{ background: backgroundGradient }}
+                    className={cn(
+                        "h-60 w-80 overflow-hidden rounded-md",
+                        contentClassName,
+                    )}
+                >
+                    <div className="relative h-full w-full">
+                        {content[activeCard].content ?? null}
+                    </div>
                 </div>
             </div>
         </motion.div>

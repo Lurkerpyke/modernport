@@ -5,6 +5,7 @@ import { AuroraBackgroundDemo } from '@/components/Hero';
 import { SkillsSection } from '@/components/SkillsSections';
 import { Projects } from '@/components/Projects';
 import { TimelineDemo } from '@/components/TimelineDemo';
+import { ServicesSection } from '@/components/Services';
 
 export default function Home() {
   return (
@@ -15,11 +16,14 @@ export default function Home() {
       {/* Skills Section */}
       <SkillsSection />
 
-      {/* Projects Showcase */}
+      {/* Projects Showcase Section */}
       <Projects />
 
-      {/* Timeline */}
+      {/* Timeline Section*/}
       <TimelineDemo />
+
+      {/* Services Section */}
+      <ServicesSection />
     </div>
   )
 }
