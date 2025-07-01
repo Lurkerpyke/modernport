@@ -1,11 +1,10 @@
-import ProjectsSection from '@/components/projectsec'
-import Projectsec from '@/components/projectsec'
-import React from 'react'
+import ProjectsSection from '@/components/projectsec';
+import React from 'react';
 
 const page = () => {
   return (
     <ProjectsSection />
   )
-}
+};
 
 export default page;
