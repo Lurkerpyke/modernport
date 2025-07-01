@@ -131,13 +131,13 @@ const StickyScroll = ({
             {/* Container for the floating card and SVG */}
             <div className="sticky top-0 hidden lg:block">
                 {/* Girl positioned above the card */}
-                <div className="relative mb-[-70px] z-20">
+                <div className="relative z-20">
                     <img
                         src="/undraw/undraw_professional-card_ldgq.svg"
                         alt="girl"
                         className="h-[150px] mx-auto"
                         style={{
-                            transform: 'translateY(20%)',
+                            transform: 'translateY(10%)',
                             maxWidth: '90%'
                         }}
                     />
