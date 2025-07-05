@@ -9,17 +9,22 @@ import React from 'react';
 export const SkillsSection = () => {
     return (
         <section className="py-24 px-4 bg-slate-950/50">
-            <div className="max-w-7xl mx-auto">
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="text-4xl font-bold text-center mb-16 text-slate-200"
-                >
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Habilidades Técnicas
-                    </span>
-                </motion.h2>
+            <div className="max-w-7xl mx-auto relative">
+                <div className='flex flex-col items-center gap-5'>
+                    <div>
+                        <img src="/undraw/undraw_nature_yf30.svg" alt="nature" className='w-8 md:w-15 h-auto' loading='lazy' />
+                    </div>
 
+                    <motion.h2
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="text-4xl font-bold text-center mb-16 text-slate-200"
+                    >
+                        <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            Habilidades Técnicas
+                        </span>
+                    </motion.h2>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {SKILLS.map((skill, index) => (
                         <motion.div

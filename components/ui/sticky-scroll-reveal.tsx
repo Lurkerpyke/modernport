@@ -76,14 +76,14 @@ const StickyScroll = ({
                             <motion.h2
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                                className="text-2xl font-bold text-slate-100"
+                                className="text-xl font-bold text-slate-100"
                             >
                                 {item.title}
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                                className="text-lg mt-10 max-w-sm text-slate-300"
+                                className="text-sm mt-10 max-w-sm text-slate-300"
                             >
                                 {item.description}
                             </motion.p>
@@ -95,7 +95,7 @@ const StickyScroll = ({
                                     opacity: activeCard === index ? 1 : 0.3,
                                     y: activeCard === index ? 0 : 10
                                 }}
-                                className="mt-6 flex gap-3"
+                                className="mt-6 flex flex-col md:flex-row gap-3"
                             >
                                 {item.liveUrl && (
                                     <Button asChild variant="secondary" className="mr-2">

@@ -36,15 +36,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="w-full bg-slate-950/50 font-sans md:px-10 flex flex-col"
             ref={containerRef}
         >
-            <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-                <h2 className="text-lg md:text-4xl mb-4 text-center text-slate-200 max-w-4xl">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Conheça sobre minha jornada
-                    </span>
-                </h2>
-                <p className="text-slate-400 text-sm md:text-base max-w-sm mx-auto text-center">
-                    Olá me chamo Leandro Soares, sou um entusiasta da tecnologia e um amante dos desafios. Posso te ajudar criar sua presença online e se destacar no mar das redes e dar aquele UP no seu negócio.
-                </p>
+            <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 flex flex-col md:flex-row justify-center gap-5 items-center">
+                <img src="/undraw/undraw_project-complete_1zw5.svg" alt="Timeline img" className="w-10 md:w-45 h-auto" />
+                <div>
+                    <h2 className="text-lg md:text-4xl mb-4 text-center text-slate-200 max-w-4xl">
+                        <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            Conheça sobre minha jornada
+                        </span>
+                    </h2>
+                    <p className="text-slate-400 text-xs md:text-base max-w-sm mx-auto text-center">
+                        Olá me chamo Leandro Soares, sou um entusiasta da tecnologia e um amante dos desafios. Posso te ajudar criar sua presença online e se destacar no mar das redes e dar aquele UP no seu negócio.
+                    </p>
+                </div>
             </div>
 
             <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
