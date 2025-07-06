@@ -5,6 +5,7 @@ import { Card } from './ui/card';
 import { AnimatedTooltip } from './ui/animated-tooltip';
 import { Code, Palette, Server, Database } from "lucide-react";
 import React from 'react';
+import Image from 'next/image';
 
 export const SkillsSection = () => {
     return (
@@ -12,7 +13,7 @@ export const SkillsSection = () => {
             <div className="max-w-7xl mx-auto relative">
                 <div className='flex flex-col items-center gap-5'>
                     <div>
-                        <img src="/undraw/undraw_nature_yf30.svg" alt="nature" className='w-8 md:w-15 h-auto' loading='lazy' />
+                        <Image src="/undraw/undraw_nature_yf30.svg" alt="nature" className='w-[32px] md:w-[60px] h-auto' loading='lazy' width={32} height={32}/>
                     </div>
 
                     <motion.h2

@@ -4,6 +4,7 @@ import {
     useTransform,
     motion,
 } from "motion/react";
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -37,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             ref={containerRef}
         >
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 flex flex-col md:flex-row justify-center gap-5 items-center">
-                <img src="/undraw/undraw_project-complete_1zw5.svg" alt="Timeline img" className="w-10 md:w-45 h-auto" />
+                <Image src="/undraw/undraw_project-complete_1zw5.svg" alt="Timeline img" width={180} height={180} className="w-10 md:w-45 h-auto"/>
                 <div>
                     <h2 className="text-lg md:text-4xl mb-4 text-center text-slate-200 max-w-4xl">
                         <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

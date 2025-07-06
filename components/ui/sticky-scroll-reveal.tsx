@@ -4,6 +4,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const StickyScroll = ({
     content,
@@ -132,9 +133,11 @@ const StickyScroll = ({
             <div className="sticky top-0 hidden lg:block">
                 {/* Girl positioned above the card */}
                 <div className="relative z-20">
-                    <img
+                    <Image
                         src="/undraw/undraw_professional-card_ldgq.svg"
                         alt="girl"
+                        width={150}
+                        height={150}
                         className="h-[150px] mx-auto"
                         style={{
                             transform: 'translateY(10%)',

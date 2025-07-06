@@ -10,6 +10,7 @@ import { ServicesSection } from '@/components/Services';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +37,6 @@ export default function Home() {
     const el = carRef.current;
     const blackBg = document.getElementById('black-bg');
 
-    // Configura estado inicial da máscara
     gsap.set(el, {
       opacity: 1,
       WebkitMaskImage: 'radial-gradient(circle, black 0%, transparent 70%)',
@@ -49,7 +49,6 @@ export default function Home() {
       maskPosition: 'center',
     });
 
-    // Cria timeline sincronizada com scroll
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroRef.current,
@@ -61,18 +60,17 @@ export default function Home() {
       }
     });
 
-    // Anima máscara da imagem e opacidade do fundo preto juntos
     tl.to(el, {
       WebkitMaskSize: '300% 300%',
       maskSize: '300% 300%',
       ease: 'power2.out',
-    }, 0) // ← começa no tempo 0 da timeline
+    }, 0)
 
       .to(blackBg, {
         opacity: 1,
         ease: 'power2.out',
-      }, 0); // ← também no tempo 0, simultâneo
-  }, { scope: container, dependencies: [isDesktop] });  
+      }, 0);
+  }, { scope: container, dependencies: [isDesktop] });
 
   return (
     <div ref={container} className="min-h-screen bg-slate-900">
@@ -80,19 +78,18 @@ export default function Home() {
         <AuroraBackgroundDemo />
         {isDesktop && (
           <>
-            {/* Camada preta que começa invisível */}
             <div
               id="black-bg"
               className="fixed inset-0 z-40 bg-black pointer-events-none"
               style={{ opacity: 0 }}
             />
-
-            {/* Imagem com máscara radial por cima */}
-            <img
+            <Image
               loading="lazy"
               ref={carRef}
               src="/rosebg.svg"
               alt="Carrinho GSAP"
+              width={1920}
+              height={1080}
               className="fixed top-0 w-full h-auto z-50 pointer-events-none opacity-0"
             />
           </>
@@ -100,8 +97,11 @@ export default function Home() {
       </div>
 
       <SkillsSection />
+
       <Projects />
+
       <TimelineDemo />
+
       <ServicesSection />
     </div>
   )

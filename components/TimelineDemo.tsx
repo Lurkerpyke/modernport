@@ -3,6 +3,7 @@
 import React from "react";
 import { Timeline } from "./ui/timeline";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import Image from "next/image";
 
 
 export function TimelineDemo() {
@@ -15,7 +16,7 @@ export function TimelineDemo() {
                         Estava na faculdade de Ciências econômicas e começei a me interessar por análise de dados. Logo após realizei cursos de linguagem de programação python, sklearn, numpy, matplotlib. Realizei diversos projetos para adquirir conhecimento e prática.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
-                        <img
+                        <Image
                             src='/timeline/salaufpe.webp'
                             loading="lazy"
                             alt="startup template"
@@ -23,7 +24,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/paredeufpe.webp'
                             loading="lazy"
                             alt="startup template"
@@ -31,7 +32,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/campusufpe.webp'
                             loading="lazy"
                             alt="startup template"
@@ -54,7 +55,7 @@ export function TimelineDemo() {
                         A partir desse conhecimento e com a preocupação de me destacar no mercado decidi arriscar um portólio. Um portifólio simples mas que seria muito importante para meu desenvolvimento profissional. Algo como um pontapé inicial.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
-                        <img
+                        <Image
                             src='/timeline/analisedados2.webp'
                             loading="lazy"
                             alt="hero template"
@@ -62,7 +63,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/analisedados3.webp'
                             loading="lazy"
                             alt="feature template"
@@ -70,7 +71,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/analisedados4.webp'
                             loading="lazy"
                             alt="bento template"
@@ -78,7 +79,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/portfolio1.webp'
                             loading="lazy"
                             alt="cards template"
@@ -122,7 +123,7 @@ export function TimelineDemo() {
                         Apliquei para diversas vagas de analista de dados no linkedin, enquanto isso estava trabalhando na secretaria da minha antiga escola.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
-                        <img
+                        <Image
                             loading="lazy"
                             src='/timeline/analisedadosimportante.webp'
                             alt="hero template"
@@ -130,7 +131,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/sqlserver2.webp'
                             loading="lazy"
                             alt="feature template"
@@ -138,7 +139,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/webgallery.webp'
                             loading="lazy"
                             alt="cards template"
@@ -146,7 +147,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/analiseimg2.webp'
                             loading="lazy"
                             alt="cards template"
@@ -169,7 +170,7 @@ export function TimelineDemo() {
                         Realizei projetos de analise de dados e de desenvolvimento de web Aplications. Você pode dar uma olhada na barra superior à página na opção &quot;Projetos&quot;. Começei a usar UI das plataformar aceternety e shadcn.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
-                        <img
+                        <Image
                             src='/timeline/devnext1.webp'
                             loading="lazy"
                             alt="hero template"
@@ -177,7 +178,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/portfolio2.webp'
                             loading="lazy"
                             alt="feature template"
@@ -185,7 +186,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/cs50.webp'
                             loading="lazy"
                             alt="feature template"
@@ -230,7 +231,7 @@ export function TimelineDemo() {
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <img
+                        <Image
                             src='/timeline/gym4.webp'
                             loading="lazy"
                             alt="hero template"
@@ -238,7 +239,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/gym3.webp'
                             loading="lazy"
                             alt="feature template"
@@ -246,7 +247,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/gym2.webp'
                             loading="lazy"
                             alt="cards template"
@@ -254,7 +255,7 @@ export function TimelineDemo() {
                             height={500}
                             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
                         />
-                        <img
+                        <Image
                             src='/timeline/gym1.webp'
                             loading="lazy"
                             alt="cards template"
