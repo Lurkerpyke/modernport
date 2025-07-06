@@ -140,7 +140,7 @@ const StickyScroll = ({
                         height={150}
                         className="h-[150px] mx-auto"
                         style={{
-                            transform: 'translateY(10%)',
+                            transform: 'translateY(25%)',
                             maxWidth: '90%'
                         }}
                     />
