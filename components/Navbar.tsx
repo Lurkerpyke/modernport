@@ -33,7 +33,7 @@ export const Navbar = () => {
                         <Button variant="ghost" asChild>
                             <Link
                                 href="/contact"
-                                className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
+                                className="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition-all duration-300 ease-in-out"
                             >
                                 <Mail className="h-4 w-4" />
                                 Contatos
@@ -43,7 +43,7 @@ export const Navbar = () => {
                             <Link
                                 href="/Curriculo_2025.pdf"
                                 download
-                                className="text-slate-300 hover:text-pink-400 flex items-center gap-2"
+                                className="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition-all duration-300 ease-in-out"
                             >
                                 <FileText className="h-4 w-4" />
                                 Baixe Currículo
