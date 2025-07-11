@@ -8,15 +8,15 @@ import { Analytics } from "@vercel/analytics/next"
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
-  display: "swap", // melhora o carregamento perceptível
-  preload: true, // Add preloading
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
   display: "swap",
-  preload: true, // Add preloading
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -65,4 +65,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 import { AuroraBackgroundDemo } from '@/components/Hero';
 import { SkillsSection } from '@/components/SkillsSections';
 import { Projects } from '@/components/Projects';
@@ -10,11 +11,12 @@ import { ServicesSection } from '@/components/Services';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
+  // Referenciais e State para Desktop/Mobile
   const container = useRef<HTMLDivElement>(null);
   const carRef = useRef<HTMLImageElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -26,12 +28,13 @@ export default function Home() {
       setIsDesktop(window.innerWidth >= 768);
     };
 
-    checkScreenSize(); // Executa na montagem
+    checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
   useGSAP(() => {
+    // Lado do cliente e inicio das animações GSAP
     if (!isDesktop || !carRef.current || !heroRef.current) return;
 
     const el = carRef.current;
@@ -96,13 +99,18 @@ export default function Home() {
         )}
       </div>
 
+      {/* Sessão de Habilidades */}
       <SkillsSection />
 
+      {/* Sessão Projetos */}
       <Projects />
 
+      {/* Sessão Timeline */}
       <TimelineDemo />
 
+      {/* Sessão Serviços */}
       <ServicesSection />
+
     </div>
   )
-}
+};

@@ -9,13 +9,14 @@ import Image from 'next/image';
 
 
 export default function ContactPage() {
-
+    // Constantes para receber, carregamento e Status
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
+    // Função para Enviar o Formulário
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
@@ -44,7 +45,7 @@ export default function ContactPage() {
                 console.error('Erro ao enviar a mensagem');
             }
         } catch {
-            console.error('Erro na requisição:');
+            console.error('Erro na requisição');
         } finally {
             setLoading(false);
         }
@@ -55,7 +56,7 @@ export default function ContactPage() {
             <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-slate-950/50">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
-                        {/* Contact Form */}
+                        {/* Formulário */}
                         <motion.div
                             initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -120,7 +121,7 @@ export default function ContactPage() {
                             </Card>
                         </motion.div>
 
-                        {/* Contact Info */}
+                        {/* Contatos */}
                         <motion.div
                             initial={{ opacity: 0, x: 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -221,7 +222,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Illustration */}
+                            {/* Ilustração */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -242,4 +243,4 @@ export default function ContactPage() {
             </section>
         </div>
     );
-}
+};
