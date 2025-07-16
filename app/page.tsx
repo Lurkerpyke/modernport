@@ -88,6 +88,9 @@ export default function Home() {
             />
             <Image
               fetchPriority="high"
+              onLoad={() => {
+                gsap.to(carRef.current, { opacity: 1, duration: 1 });
+              }}
               ref={carRef}
               src="/rosebg.svg"
               alt="Carrinho GSAP"
