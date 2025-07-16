@@ -87,7 +87,7 @@ export default function Home() {
               style={{ opacity: 0 }}
             />
             <Image
-              loading="lazy"
+              fetchPriority="high"
               ref={carRef}
               src="/rosebg.svg"
               alt="Carrinho GSAP"
