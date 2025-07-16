@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
+import SplashCursor from "@/components/Splash";
 
 // Carregando fontes com suporte para CSS custom property
 const geistSans = Geist({
@@ -59,6 +60,7 @@ export default function RootLayout({
           dark:text-neutral-100
         `}
       >
+        <SplashCursor />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Analytics />
