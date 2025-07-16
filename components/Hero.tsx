@@ -65,6 +65,7 @@ export function AuroraBackgroundDemo() {
             <motion.img
                 src="/undraw/undraw_a-day-at-the-park_9w8d.svg"
                 alt="Day at the park"
+                fetchPriority="high"
                 className="lg:w-64 md:w-46 h-auto absolute bottom-20 right-30 hidden md:block"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -73,6 +74,7 @@ export function AuroraBackgroundDemo() {
             <motion.img
                 src="/undraw/undraw_waiting-for-you_xhp2.svg"
                 alt="Waiting illustration"
+                fetchPriority="high"
                 className="lg:w-64 md:w-46 h-auto absolute bottom-20 left-30 hidden md:block"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -87,6 +89,7 @@ export function AuroraBackgroundDemo() {
                 <motion.img
                     src="/undraw/undraw_aircraft_usu4.svg"
                     alt="Aircraft"
+                    fetchPriority="high"
                     className="w-16 h-auto md:w-24 lg:w-32"
                     animate={{ y: [0, -10, 0] }}
                     transition={{
@@ -106,6 +109,7 @@ export function AuroraBackgroundDemo() {
                 <motion.img
                     src="/undraw/undraw_floating_hvri.svg"
                     alt="Floating illustration"
+                    fetchPriority="high"
                     className="w-16 h-auto md:w-24 lg:w-32"
                     animate={{ y: [0, 10, 0] }}
                     transition={{
