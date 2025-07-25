@@ -48,20 +48,6 @@ const StickyScroll = ({
         "#171717",
     ];
 
-    const linearGradients = useMemo(() => [
-        "linear-gradient(to bottom right, #ffffff, #008a94)",
-        "linear-gradient(to bottom right, #111330, #6366f1)",
-        "linear-gradient(to bottom right, #f97316, #eab308)",
-    ], []);
-
-    const [backgroundGradient, setBackgroundGradient] = useState(
-        linearGradients[0],
-    );
-
-    useEffect(() => {
-        setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-    }, [activeCard, linearGradients]);
-
     return (
         <motion.div
             animate={{
@@ -148,7 +134,6 @@ const StickyScroll = ({
 
                 {/* Card container */}
                 <div
-                    style={{ background: backgroundGradient }}
                     className={cn(
                         "h-60 w-80 overflow-hidden rounded-md",
                         contentClassName,
