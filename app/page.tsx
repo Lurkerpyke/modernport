@@ -92,7 +92,7 @@ export default function Home() {
                 gsap.to(carRef.current, { opacity: 1, duration: 1 });
               }}
               ref={carRef}
-              src="/rosebg.svg"
+              src="/rosebg.avif"
               alt="Carrinho GSAP"
               width={1920}
               height={1080}
