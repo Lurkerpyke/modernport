@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  verification: {
+    google: "8FEx7-uRZpE-9lzaqrmB_JF-9Halv1h0P11FFCQTafo",
+  },
   keywords: ["Developer", "Portfolio", "React", "Next.js"],
   robots: "index, follow",
 };
@@ -47,6 +50,7 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="google-site-verification" content="8FEx7-uRZpE-9lzaqrmB_JF-9Halv1h0P11FFCQTafo" />
         <meta property="og:image" content="Link preview image URL"></meta>
       </head>
       <body
